@@ -1,22 +1,18 @@
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // ArrayList oluştur
+        ArrayList<Integer> sayilar = new ArrayList<>();
 
-        try {
-            System.out.print("Birinci sayıyı girin: ");
-            double sayi1 = scanner.nextDouble();
+        // Sayıları ekle
+        sayilar.add(10);
+        sayilar.add(20);
+        sayilar.add(30);
+        sayilar.add(40);
+        sayilar.add(50);
 
-            System.out.print("İkinci sayıyı girin: ");
-            double sayi2 = scanner.nextDouble();
-
-            double sonuc = sayi1 / sayi2;
-            System.out.println("Sonuç: " + sonuc);
-        } catch (ArithmeticException e) {
-            System.out.println("Hata: Bir sayı sıfıra bölünemez!");
-        } finally {
-            scanner.close();
-        }
+        // Lambda ile forEach kullanarak yazdır
+        sayilar.forEach(sayi -> System.out.println(sayi));
     }
 }
