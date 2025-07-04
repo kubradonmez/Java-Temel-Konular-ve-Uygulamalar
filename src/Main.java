@@ -1,18 +1,17 @@
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
-        // ArrayList oluştur
-        ArrayList<Integer> sayilar = new ArrayList<>();
+        // 1. int değişken oluştur ve değer ata
+        int sayi = 42;
 
-        // Sayıları ekle
-        sayilar.add(10);
-        sayilar.add(20);
-        sayilar.add(30);
-        sayilar.add(40);
-        sayilar.add(50);
+        // 2. Autoboxing: int → Integer
+        Integer sayiNesne = sayi;
 
-        // Lambda ile forEach kullanarak yazdır
-        sayilar.forEach(sayi -> System.out.println(sayi));
+        // 3. Unboxing: Integer → int
+        int sayiTekrar = sayiNesne;
+
+        // 4. Hepsini ekrana yazdır
+        System.out.println("int değişken: " + sayi);
+        System.out.println("Integer nesne: " + sayiNesne);
+        System.out.println("Tekrar int: " + sayiTekrar);
     }
 }
