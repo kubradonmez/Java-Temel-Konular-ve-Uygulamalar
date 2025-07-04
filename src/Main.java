@@ -1,16 +1,19 @@
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Main {
     public static void main(String[] args) {
+        // HashSet oluştur
+        HashSet<String> meyveler = new HashSet<>();
 
-        ArrayList<String> sehirler = new ArrayList<>();
+        // Aynı elemanları eklemeye çalış
+        meyveler.add("elma");
+        meyveler.add("elma");
+        meyveler.add("muz");
+        meyveler.add("kiraz");
 
-        sehirler.add("İzmir");
-        sehirler.add("Ankara");
-        sehirler.add("İstanbul");
-
-        for (String sehir : sehirler) {
-            System.out.println(sehir);
+        // Tüm elemanları ekrana yazdır
+        for (String meyve : meyveler) {
+            System.out.println(meyve);
         }
     }
 }
