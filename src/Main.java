@@ -1,19 +1,22 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // HashMap oluştur
-        HashMap<String, Integer> notlar = new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
 
-        // Öğrenci ve notları ekle
-        notlar.put("Ahmet", 90);
-        notlar.put("Ayşe", 85);
-        notlar.put("Mehmet", 75);
+        try {
+            System.out.print("Birinci sayıyı girin: ");
+            double sayi1 = scanner.nextDouble();
 
-        // Tüm öğrencileri ve notlarını yazdır
-        for (Map.Entry<String, Integer> entry : notlar.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
+            System.out.print("İkinci sayıyı girin: ");
+            double sayi2 = scanner.nextDouble();
+
+            double sonuc = sayi1 / sayi2;
+            System.out.println("Sonuç: " + sonuc);
+        } catch (ArithmeticException e) {
+            System.out.println("Hata: Bir sayı sıfıra bölünemez!");
+        } finally {
+            scanner.close();
         }
     }
 }
